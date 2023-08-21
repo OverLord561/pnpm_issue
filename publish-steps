@@ -1,0 +1,15 @@
+Recursive publishing with filtering to exclude some components 
+
+pnpm publish --embed-readme -r --no-git-checks --tag my-tag --filter=!component_name ... 50 other filters
+
+or 
+
+Publishing with filtering to include specific components 
+
+pnpm publish --embed-readme --no-git-checks --tag my-tag --filter=component_name ... 50 other filters
+
+or
+
+Publish with 8 filters when one name is substring of another name where component_name is subname
+
+pnpm publish --embed-readme --no-git-checks --tag my-tag --filter=component_name--filter component_name_like_patch
